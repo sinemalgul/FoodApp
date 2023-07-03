@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "231217199877",
+    "project_id": "fir-authentication-16124",
+    "storage_bucket": "fir-authentication-16124.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231217199877:android:cc3cc3df074abf4ce6956c",
+        "android_client_info": {
+          "package_name": "com.sinemalgul.foodapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "231217199877-j0a598ildorfg9u8jd6dku9s72a715hk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sinemalgul.foodapp",
+            "certificate_hash": "d48f8f0a1d489321aab6f583d0b4e226daa3b91b"
+          }
+        },
+        {
+          "client_id": "231217199877-ahgmjd5en5dm2tbb7o8ccsrd5uhrjdkn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTqJBQdh1x6HprLHVwnpfVwGwlMNqEEqo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "231217199877-ahgmjd5en5dm2tbb7o8ccsrd5uhrjdkn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

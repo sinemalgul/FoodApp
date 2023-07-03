@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.sinemalgul.foodapp.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/splashToOnBoarding"
+            app:destination="@id/onboardingFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/splashToHome"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/splashToSignInAndSignup"
+            app:destination="@id/signInAndSignupFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.sinemalgul.foodapp.ui.onboarding.OnBoardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding">
+        <action
+            android:id="@+id/onBoardingToSignInAndSignUp"
+            app:destination="@id/signInAndSignupFragment"
+            app:popUpTo="@id/onboardingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInAndSignupFragment"
+        android:name="com.sinemalgul.foodapp.ui.signinandsignup.SignInAndSignUpFragment"
+        android:label="fragment_signin_and_signup"
+        tools:layout="@layout/fragment_sign_in_and_sign_up">
+        <action
+            android:id="@+id/signInAndSignUpToSignIn"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/signInAndSignUpToSignUp"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.sinemalgul.foodapp.ui.signin.SignInFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/signInToSignUp"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/signInToHome"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/signInFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.sinemalgul.foodapp.ui.signup.SignUpFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup">
+
+        <action
+            android:id="@+id/signUpToSignIn"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/signUpToHome"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/signUpFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.sinemalgul.foodapp.ui.cart.CartFragment"
+        android:label="CartFragment"
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/cartToMeal"
+            app:destination="@id/mealFragment" />
+        <action
+            android:id="@+id/cartToPayment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.sinemalgul.foodapp.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/homeToMeal"
+            app:destination="@id/mealFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.sinemalgul.foodapp.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_signInAndSignupFragment"
+            app:destination="@id/signInAndSignupFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_messageFragment"
+            app:destination="@id/messageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealFragment"
+        android:name="com.sinemalgul.foodapp.ui.meal.MealFragment"
+        android:label="fragment_meal"
+        tools:layout="@layout/fragment_meal">
+        <argument
+            android:name="restaurant"
+            app:argType="com.sinemalgul.foodapp.data.model.Restaurant" />
+        <action
+            android:id="@+id/mealToCart"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.sinemalgul.foodapp.ui.payment.PaymentFragment"
+        android:label="PaymentFragment"
+        tools:layout="@layout/fragment_payment">
+        <action
+            android:id="@+id/paymentToPaymentSuccess"
+            app:destination="@id/paymentSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentSuccessFragment"
+        android:name="com.sinemalgul.foodapp.ui.paymentsuccess.PaymentSuccessFragment"
+        android:label="PaymentSuccessFragment"
+        tools:layout="@layout/fragment_payment_success">
+        <action
+            android:id="@+id/paymentSuccessToHome"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/paymentSuccessFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.sinemalgul.foodapp.ui.chatbot.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+</navigation>

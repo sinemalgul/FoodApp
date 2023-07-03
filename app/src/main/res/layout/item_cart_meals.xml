@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_meal"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:padding="10dp"
+            android:src="@mipmap/ic_launcher_round"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_meal_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:lines="2"
+            android:maxLines="2"
+            android:text="Meal Name"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_price"
+            app:layout_constraintEnd_toStartOf="@+id/img_delete"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_meal"
+            app:layout_constraintTop_toTopOf="@+id/img_meal" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="30$"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/img_decrease"
+            app:layout_constraintStart_toStartOf="@+id/tv_meal_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_meal_name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_product_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ellipsize="end"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/img_decrease"
+            app:layout_constraintEnd_toStartOf="@+id/img_increase"
+            app:layout_constraintStart_toEndOf="@+id/img_decrease"
+            app:layout_constraintTop_toTopOf="@+id/img_decrease" />
+
+        <ImageView
+            android:id="@+id/img_increase"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/background_edittext"
+            android:elevation="8dp"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_decrease"
+            app:layout_constraintStart_toEndOf="@+id/tv_product_count"
+            app:layout_constraintTop_toTopOf="@+id/img_decrease"
+            app:srcCompat="@drawable/ic_round_add_24"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/img_decrease"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background_edittext"
+            android:elevation="8dp"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_meal"
+            app:layout_constraintStart_toStartOf="@+id/tv_meal_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price"
+            app:srcCompat="@drawable/ic_round_remove_24"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/img_delete"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/background_delete"
+            android:padding="6dp"
+            android:src="@drawable/ic_round_delete_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
