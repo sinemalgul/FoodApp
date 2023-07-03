@@ -21,7 +21,7 @@ FOODIES
 
 </br>
 
-| Welcome | Sign In | Sıgn Up |
+| Welcome | Sign In | Sign Up |
 | ------ | ---- | ---- |
 |<img src="https://github.com/sinemalgul/FoodApp/assets/61560825/b49f0f26-6839-410b-845f-d8c6cf3abe3b" width="250" height="500"/>|<img src="https://github.com/sinemalgul/FoodApp/assets/61560825/39468906-585e-44d0-8e46-e054b5042487" width="250" height="500"/>|<img src="https://github.com/sinemalgul/FoodApp/assets/61560825/5d4b7d16-a029-42cf-8fbf-fd50c08e16c0" width="250" height="500"/>|
 
