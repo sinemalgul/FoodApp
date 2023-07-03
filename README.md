@@ -9,7 +9,7 @@ FOODIES
  - Firebase Auth & Firestore
  - Room Database
  - Glide
- - Lottie
+ - Lottie (<a href="https://github.com/LottieFiles/lottie-android">Source</a>) <br>
  - ViewPager2
  - AI ChatBot
 
